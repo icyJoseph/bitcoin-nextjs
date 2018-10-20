@@ -1,10 +1,11 @@
-import NavBar from "../components/NavBar";
+import Layout from "../components/Layout";
 
 const Index = () => (
-  <div>
-    <NavBar />
-    <h1>BitCoin Prices</h1>
-  </div>
+  <Layout>
+    <div>
+      <h1>BitCoin Prices</h1>
+    </div>
+  </Layout>
 );
 
 // As if JS was php, this index page gets loaded when the browser goes to the root of the url /
