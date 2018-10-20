@@ -10,9 +10,12 @@ class Prices extends React.Component {
     const { bpi } = this.props;
     const { favorite } = this.state;
     const currencies = Object.keys(bpi);
+    const notFavorites = currencies.filter(curr => curr !== favorite);
+    // check if the favorite is in the currencies, if so, put it first and then the notFavorites
     const sortedCurrencies = currencies.includes(favorite)
-      ? [favorite].concat(currencies.filter(curr => curr !== favorite))
+      ? [favorite].concat(notFavorites)
       : currencies;
+
     return (
       <div>
         <ul className="list-group">
