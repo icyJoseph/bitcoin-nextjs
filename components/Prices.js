@@ -19,19 +19,22 @@ class Prices extends React.Component {
     return (
       <div>
         <ul className="list-group">
-          {sortedCurrencies.map(currency => (
-            <li className="list-group-item" key={currency}>
-              Bitcoin rate for {bpi[currency].description}:{" "}
-              <span
-                className={`badge badge-${
-                  currency === favorite ? "danger" : "primary"
-                }`}
-              >
-                {bpi[currency].code}
-              </span>{" "}
-              <strong>{bpi[currency].rate}</strong>
-            </li>
-          ))}
+          {sortedCurrencies.map(currency => {
+            const { description, code, rate } = bpi[currency];
+            return (
+              <li className="list-group-item" key={currency}>
+                Bitcoin rate for {description}:{" "}
+                <span
+                  className={`badge badge-${
+                    currency === favorite ? "danger" : "primary"
+                  }`}
+                >
+                  {code}
+                </span>{" "}
+                <strong>{rate}</strong>
+              </li>
+            );
+          })}
         </ul>
         <br />
         <select

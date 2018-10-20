@@ -5,8 +5,10 @@ import Prices from "../components/Prices";
 const Index = ({ bpi }) => (
   <Layout>
     <div>
-      <h1>BitCoin Prices</h1>
-      <p>Check current BitCoin rates.</p>
+      <h1>BitCoin Price</h1>
+      <p>
+        Current price of <strong>1 BitCoin</strong>
+      </p>
       <Prices bpi={bpi} />
     </div>
   </Layout>
