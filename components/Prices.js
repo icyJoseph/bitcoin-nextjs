@@ -20,7 +20,9 @@ class Prices extends React.Component {
       <div>
         <ul className="list-group">
           {sortedCurrencies.map(currency => {
-            const { description, code, rate } = bpi[currency];
+            const {
+              [currency]: { description, code, rate }
+            } = bpi;
             return (
               <li className="list-group-item" key={currency}>
                 Bitcoin rate for {description}:{" "}
