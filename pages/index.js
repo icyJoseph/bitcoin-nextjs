@@ -1,19 +1,8 @@
-import Link from "next/link";
+import NavBar from "../components/NavBar";
 
 const Index = () => (
   <div>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </li>
-    </ul>
+    <NavBar />
     <h1>BitCoin Prices</h1>
   </div>
 );
