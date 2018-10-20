@@ -1,11 +1,13 @@
 import axios from "axios";
 import Layout from "../components/Layout";
+import Prices from "../components/Prices";
 
 const Index = ({ bpi }) => (
   <Layout>
     <div>
       <h1>BitCoin Prices</h1>
-      <p>{bpi.USD.rate}</p>
+      <p>Check current BitCoin rate</p>
+      <Prices bpi={bpi} />
     </div>
   </Layout>
 );
